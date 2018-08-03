@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Popover title="{mapData>problem} {mapData>requestDate}" class="sapUiContentPadding" placement="Bottom">
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+				singleContainerFullSize="true">
+				<f:content>
+					<Label text="{i18n>RequestFor}"/>
+					<Text text="{mapData>problem}"/>
+					<Label text="{i18n>RequestDescr}"/>
+					<Text text="{mapData>description}"/>
+					<Label text="{i18n>Requester}"/>
+					<Text text="{mapData>custName} {mapData>custSurName}"/>
+					<Label text="{i18n>RequesterPhone}"/>
+					<Text text="{mapData>phone}"/>
+					<Label text="{i18n>RequesterAddress}"/>
+					<Text text="{mapData>address}"/>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>ShowDetails}" press="handleEmailPress"/>
+			</Toolbar>
+		</footer>
+	</Popover>
+</core:FragmentDefinition>
